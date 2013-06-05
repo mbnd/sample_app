@@ -44,6 +44,23 @@ describe "StaticPages" do
 
 	end
 
+		describe "Contact page" do
+
+		it "should have content 'Contact page' " do
+			visit '/static_pages/contact' #capybara function visit to simulate action
+			page.should have_selector('h1', :text=> 'Contact')
+		end
+
+		it "should have title 'Contact'" do
+			visit '/static_pages/contact'
+			page.should have_selector('title', :text=> "Ruby on Rails | Contact")
+		end
+
+
+	end
+
+
+
 end
 
 
